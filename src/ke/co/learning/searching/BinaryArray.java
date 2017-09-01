@@ -7,6 +7,10 @@ public class BinaryArray {
 	private int[] data;// array of values
 	private static final Random generator = new Random();
 
+	public BinaryArray(int[] data) {
+		this.data = data;
+	}
+
 	public BinaryArray(int size) {
 		// create array of given size and fill with random integers
 		data = new int[size];// create space for array

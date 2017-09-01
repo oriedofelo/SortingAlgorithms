@@ -18,6 +18,11 @@ public class MergeSort {
 	private int[] data;// array of values
 	private static final Random generator = new Random();
 
+	public MergeSort(int[] data) {
+		this.data = data;
+	}
+	
+
 	// create array of given size and fill with random integers
 	public MergeSort(int size) {
 		data = new int[size];// create space for array
@@ -116,5 +121,17 @@ public class MergeSort {
 	public String toString() {
 		return subarray(0, data.length - 1);
 	}// end method toString
+
+
+
+	public int[] getData() {
+		return data;
+	}
+
+
+
+	public void setData(int[] data) {
+		this.data = data;
+	}
 
 }// end class MergeSort

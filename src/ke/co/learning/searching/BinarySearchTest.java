@@ -10,7 +10,7 @@ public class BinarySearchTest {
 
 		int searchInt;// search key
 		int position; // location of search key in array
-
+		
 		// create array and output it
 		BinaryArray searchArray = new BinaryArray(15);
 		System.out.println(searchArray);
