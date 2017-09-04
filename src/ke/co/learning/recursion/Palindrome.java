@@ -16,7 +16,7 @@ public class Palindrome {
 		} else {
 			char chars[] = word.toCharArray();
 			if (chars[0] == chars[endAt]) {
-				String substring = word.substring(1, endAt--);
+				String substring = word.substring(1, word.length() - 1);
 				return calculator(substring, beginAt, substring.length() - 1);
 
 			} else {
@@ -29,7 +29,7 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		Palindrome pal = new Palindrome();
-		String theString = "rotor";
+		String theString = "retor";
 		boolean result = pal.calculator(theString, 0, theString.length() - 1);
 		System.err.println("Is palindrome: " + result);
 	}
