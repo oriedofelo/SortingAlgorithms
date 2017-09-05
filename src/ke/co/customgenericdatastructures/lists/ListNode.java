@@ -6,7 +6,9 @@ public class ListNode<T> {
 	// package access members; List can access these directly
 	T data; // data for this node
 	ListNode<T> nextNode; // reference to the next node in the list
-
+	int position;//stores position of item in list
+	
+	
 	// constructor creates a ListNode that refers to object
 	public ListNode(T object) {
 		// TODO Auto-generated constructor stub
@@ -37,6 +39,14 @@ public class ListNode<T> {
 
 	public void setNextNode(ListNode<T> nextNode) {
 		this.nextNode = nextNode;
+	}
+
+	public int getPosition() {
+		return position;
+	}
+
+	public void setPosition(int position) {
+		this.position = position;
 	}
 
 

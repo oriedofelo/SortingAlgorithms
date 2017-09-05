@@ -1,7 +1,5 @@
 package ke.co.customgenericdatastructures.lists;
 
-import javax.swing.ListCellRenderer;
-
 // class List definition
 public class List<T> {
 	private ListNode<T> firstNode;
@@ -98,4 +96,39 @@ public class List<T> {
 
 		System.out.println("\n");
 	}
+
+	public ListNode<T> find(int index) {
+		int currentIndex = 0;
+
+		if (isEmpty()) {
+			return null;
+		}
+		ListNode<T> current = firstNode;
+		// while not at end of list, output current node's data
+		while (current != null) {
+			if (currentIndex == index) {
+				return current;
+			}
+			current = current.nextNode;
+			currentIndex++;
+		} // end while
+		return firstNode;
+
+	}
+
+	// get list size
+	public int size() {
+		int size = 0;
+		if (isEmpty()) {
+			return size;
+		}
+		ListNode<T> current = firstNode;
+		// while not at end of list, output current node's data
+		while (current != null) {
+			current = current.nextNode;
+			size++;
+		} // end while
+		return size;
+	}
+
 }

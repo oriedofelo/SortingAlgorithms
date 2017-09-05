@@ -6,14 +6,13 @@ public class ListTest {
 		
 		//insert integers in list
 		list.insertAtFront(-1);
+		list.insertAtFront(2);
+		list.insertAtFront(5);
 		list.print();
-		list.insertAtFront(0);
-		list.print();
-		list.insertAtBAck(5);
-		list.print();
-		list.removeFromFront();
-		list.print();
-		list.removeFromBack();
-		list.print();
+		
+		ListNode<Integer> item=list.find(2);
+		System.err.println("Found Item is : "+item.getData());
+		
+		System.err.println("Size of list is: "+list.size());
 	}
 }
