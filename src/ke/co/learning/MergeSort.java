@@ -35,12 +35,13 @@ public class MergeSort {
 
 	// cals recursive split method to begin merge sorting
 	public void sort() {
+		//pass first and last elements of array
 		sortArray(0, data.length - 1);
 	}
 
 	// splits array, sorts subarrays and merges subarrays into sorted array
 	private void sortArray(int low, int high) {
-		// test base case; size of arra equals 1
+		// test base case; size of array equals 1
 		if ((high - low) >= 1) {
 			int middle1 = (low + high) / 2; // calculate middle of array
 			int middle2 = middle1 + 1; // calculate next element over
