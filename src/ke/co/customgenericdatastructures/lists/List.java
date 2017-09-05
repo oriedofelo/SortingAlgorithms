@@ -116,6 +116,12 @@ public class List<T> {
 
 	}
 
+	// replace item at specific position in list
+	public void replaceAt(T insertItem, int position) {
+		ListNode<T> item = find(position);
+		item.nextNode = new ListNode<T>(insertItem);
+	}
+
 	// get list size
 	public int size() {
 		int size = 0;

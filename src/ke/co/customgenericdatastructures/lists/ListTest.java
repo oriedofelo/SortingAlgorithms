@@ -8,6 +8,7 @@ public class ListTest {
 		list.insertAtFront(-1);
 		list.insertAtFront(2);
 		list.insertAtFront(5);
+		list.replaceAt(4, 1);
 		list.print();
 		
 		ListNode<Integer> item=list.find(2);
