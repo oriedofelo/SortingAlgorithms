@@ -1,5 +1,6 @@
 package ke.co.customgenericdatastructures.lists;
 
+import javax.swing.ListCellRenderer;
 
 // class List definition
 public class List<T> {
@@ -44,15 +45,35 @@ public class List<T> {
 		if (firstNode == lastNode)
 			firstNode = lastNode = null;
 		else { // locate new last node
+			firstNode = firstNode.nextNode;
+
+		} // end else
+		return removedItem;// return removed node data
+	}// end method
+
+	// remove last node form list
+	public T removeFromBack() throws EmptyListException {
+		if (isEmpty()) // throw exception of list is empty
+			throw new EmptyListException(name);
+
+		T removedItem = lastNode.data;// retrieve data being removed
+
+		// update references firstNode and lastNode
+		if (firstNode == lastNode)
+			firstNode = lastNode = null;
+		else // locate new last node
+		{
 			ListNode<T> current = firstNode;
 
 			// loop while current node does not refer to lastNode
 			while (current.nextNode != lastNode)
 				current = current.nextNode;
 
-		} // end else
+			lastNode = current;// current is new lastNode
+			current.nextNode = null;
+		}
 		return removedItem;// return removed node data
-	}// end method
+	}
 
 	// determine whether list is empty
 	public boolean isEmpty() {

@@ -11,5 +11,9 @@ public class ListTest {
 		list.print();
 		list.insertAtBAck(5);
 		list.print();
+		list.removeFromFront();
+		list.print();
+		list.removeFromBack();
+		list.print();
 	}
 }
